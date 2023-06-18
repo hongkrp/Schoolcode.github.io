@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="/Schoolcode/Zero.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Document</title>
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Odor+Mean+Chey&family=Poppins:wght@200;300;400;700&display=swap");
+    @import url('https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@300&family=Noto+Serif+Khmer:wght@800&display=swap');
+
+    #fontkhmerfamily {
+        font-family: "Poppins", sans-serif, "Odor Mean Chey", serif;
+    }
+
+    .background {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+    }
+
+    .box-one {
+        width: 50%;
+        height: 100vh;
+        background: #f8bebb;
+    }
+
+    .box-two {
+        width: 50%;
+        height: 100vh;
+        background: #bde4e3;
+    }
+
+    .box-login {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        border-radius: 20px;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 50px;
+    }
+
+    input {
+        border-radius: 5px;
+        border: 1px solid black !important;
+        outline: none;
+        background: transparent !important;
+    }
+
+    button {
+        padding: 10px 40px;
+        border-radius: 10px;
+        border: 1px solid rgb(0, 0, 0);
+        color: rgb(0, 0, 0);
+        background: transparent;
+        font-weight: bold;
+        transition: all 0.3s;
+    }
+
+    button:hover {
+        background: #0d6efd;
+        border: 1px solid white;
+        color: white;
+    }
+
+    .input-control .error {
+        color: red;
+    }
+
+    p {
+        text-align: justify;
+        line-height: 200%;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 950px) {
+        .box-login {
+            border-radius: 0;
+            width: 100%;
+            margin: 0;
+            padding: 20px 20px;
+        }
+
+        h3,
+        h5 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    }
+</style>
+
+<body>
+    <div class="background">
+        <div class="box-one"></div>
+        <div class="box-two"></div>
+    </div>
+
+    <div class="box-login" id="fontkhmerfamily">
+        <h3 class="text-center fw-bold mb-4">Schoolcode</h3>
+        <h3 class="mb-4 text-center">ចូលគណនីដើម្បីរៀន</h3>
+
+        <form>
+            <div class="mb-3 input-control">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="email" class=" w-100 p-2" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div class="error"></div>
+            </div>
+            <div class="mb-3 input-control">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="w-100 p-2" id="exampleInputPassword1">
+                <div class="error"></div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 mb-3 p-2">Login</button>
+        </form>
+
+        <p>មុននិងបង្កើតគណនីសូមបងប្អូនទាំងអស់គ្នាចុចលើ Button
+            <br>Telegram ខាងក្រោមដើម្បីទាក់ទងមកកាន់ Admin <br>បង់ប្រាក់ជាមុនសិន
+        </p>
+        <div class="container text-center">
+            <button>Telegram <i class="fa-brands fa-telegram"></i> </button>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    const form = document.querySelector("form");
+    const Email = document.getElementById("exampleInputEmail1");
+    const Pass = document.getElementById("exampleInputPassword1");
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+        validateInputs();
+    });
+
+
+    const setError = (element, message) => {
+        const inputControl = element.parentElement;
+        const errorDisplay = inputControl.querySelector('.error');
+
+        errorDisplay.innerText = message;
+        inputControl.classList.add('error');
+        inputControl.classList.remove('success')
+    }
+
+    const setSuccess = element => {
+        const inputControl = element.parentElement;
+        const errorDisplay = inputControl.querySelector('.error');
+
+        errorDisplay.innerText = '';
+        inputControl.classList.add('success');
+        inputControl.classList.remove('error');
+    };
+
+    const isValidEmail = email => {
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    const validateInputs = () => {
+        const emailValue = Email.value.trim();
+        const passwordValue = Pass.value.trim();
+        if (emailValue === '') {
+            setError(Email, 'Email is required');
+        } else if (!isValidEmail(emailValue)) {
+            setError(Email, 'Provide a valid email address');
+        } else {
+            setSuccess(Email);
+        }
+
+        if (passwordValue === '') {
+            setError(Pass, 'Password is required');
+        } else if (passwordValue.length < 8) {
+            setError(Pass, 'Password must be at least 8 character.')
+        } else {
+            setSuccess(Pass);
+        }
+    };
+</script>

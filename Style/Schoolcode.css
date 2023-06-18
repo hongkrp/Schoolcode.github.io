@@ -1,0 +1,251 @@
+/* Header start */
+@import url("https://fonts.googleapis.com/css2?family=Odor+Mean+Chey&family=Poppins:wght@200;300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@300&family=Noto+Serif+Khmer:wght@800&display=swap');
+
+#navbaronscreen {
+    position: fixed;
+}
+
+.container img {
+    height: 40px;
+}
+
+.imgloganimation img {
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
+
+#fontsize {
+    font-family: "Poppins", sans-serif, "Odor Mean Chey", serif;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 30px;
+    color: #2c5282;
+}
+
+#fontsize:hover {
+    color: #0d6efd !important;
+}
+
+.navbar-nav li a {
+    margin: 0 10px;
+    color: #4f4f4f;
+    transition: all 0.3s;
+}
+
+.navbar-nav li a:hover {
+    opacity: 0.8;
+}
+
+.btntoggle {
+    background: transparent !important;
+    display: none;
+    font-size: 20px;
+}
+
+.btntoggle:focus {
+    outline: none !important;
+}
+
+.digBtn {
+    background: transparent;
+    border-radius: 3px;
+    padding: 5px 15px;
+    border: 1px solid #0d6efd;
+    color: #4f4f4f;
+    transition: all 0.3s;
+}
+
+.digBtn:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+@media screen and (max-width: 950px) {
+    .btntoggle {
+        display: block;
+    }
+
+    #fountwebsite {
+        font-size: 13px;
+    }
+
+    .navbar-nav li a {
+        font-size: 13px !important;
+    }
+
+    .imgloganimation img {
+        height: 200px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .cardPaymeny {
+        width: 300px !important;
+        padding: 30px 10px !important;
+    }
+}
+
+/* Mainsection */
+.h2colortext {
+    color: #2c5282;
+}
+
+.textcolor {
+    color: #4f4f4f;
+}
+
+.textcolor i {
+    color: #2b6cb0;
+}
+
+.btnlearn {
+    background-color: #0d6efd;
+    color: white;
+    border-radius: 3px;
+    border: 1px solid #0d6efd;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.btnlearn:hover {
+    background-color: #2b6cb0;
+    border: 1px solid #2b6cb0;
+}
+
+#fountwebsite {
+    font-family: "Poppins", sans-serif, "Odor Mean Chey", serif;
+}
+
+#imagecenter {
+    background-color: #edf2f7;
+}
+
+#imagecenter img {
+    height: 120px;
+    border-radius: 50%;
+}
+
+.next-btn,
+.prve-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    color: #4f4f4f;
+    margin: 0 15px;
+}
+
+.next-btn,
+.prve-btn {
+    animation: scroll-up 1.5s ease-in-out infinite;
+}
+
+.colorshadow {
+    cursor: pointer;
+}
+
+.colorshadow button:hover {
+    background-color: #2b6cb0 !important;
+}
+
+@keyframes scroll-up {
+    from {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#boxBtncose {
+    border: 1px solid #4f4f4f;
+    width: 300px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 30px;
+    padding: 0px;
+}
+
+.paybtn {
+    width: 130px;
+    border-radius: 30px;
+    margin: 0px 10px;
+    padding: 5px 0;
+    border: none;
+    outline: none;
+    opacity: 0.9;
+    background: transparent;
+}
+
+.active {
+    width: 130px;
+    border-radius: 30px;
+    margin: 0px 10px;
+    padding: 5px 5px;
+    border: 1px solid #0d6efd;
+    color: white;
+    background-color: #0d6efd;
+
+}
+
+.cardPaymeny {
+    width: 350px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 50px 10px;
+    border-radius: 20px;
+}
+
+.colorepay button {
+    border-radius: 25px;
+    padding: 10px 60px;
+    background-color: #0d6efd;
+    border: 1px solid #0d6efd;
+    color: white;
+}
+
+.colorepay button:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    opacity: 0.9;
+}
+
+footer img {
+    height: 40px;
+}
+
+/* add question */
+.content {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.accordion_item:hover {
+    opacity: 0.9;
+}
+
+.accordion_header {
+    cursor: pointer;
+}
+
+.accordion_content {
+    margin-left: 50px;
+    margin-right: 15px;
+    overflow: hidden;
+    height: 0;
+    transition: all .5s ease;
+    font-size: 14px;
+}
+
+.activeshow {
+    padding-bottom: 10px;
+}
+
+.ptage {
+    text-align: justify;
+    line-height: 200%;
+}

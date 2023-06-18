@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Odor+Mean+Chey&family=Poppins:wght@200;300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@300&family=Noto+Serif+Khmer:wght@800&display=swap');
+
+#fontkhmerfamily {
+    font-family: "Poppins", sans-serif, "Odor Mean Chey", serif;
+}
+.cardmenu {
+    cursor: pointer;
+}
+
+#navbaronscreen {
+    position: fixed;
+}
+
+#hearderimg img {
+    height: 40px;
+}
+
+.imgloganimation img {
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
+
+#fontasize {
+    font-family: "Poppins", sans-serif, "Odor Mean Chey", serif;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 30px;
+    color: #2c5282;
+}
+
+#fontasize:hover {
+    color: #0d6efd !important;
+}
+
+.navbar-nav {
+    font-family: "Poppins", sans-serif, "Odor Mean Chey", serif;
+}
+
+.navbar-nav li a {
+    margin: 0 10px;
+    color: #4f4f4f;
+    transition: all 0.3s;
+}
+
+.navbar-nav li a:hover {
+    opacity: 0.8;
+}
+
+.btntoggle {
+    background: transparent !important;
+    display: none;
+    font-size: 20px;
+}
+
+.btntoggle:focus {
+    outline: none !important;
+}
+
+.digBtn {
+    background: transparent;
+    border-radius: 3px;
+    padding: 5px 15px;
+    border: 1px solid #0d6efd;
+    color: #4f4f4f;
+    transition: all 0.3s;
+}
+
+.digBtn:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+input {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid black;
+}
+
+input:hover {
+    border: 1px solid #0d6efd;
+}
+
+@media screen and (max-width: 950px) {
+    #fontkhmerfamily h3 {
+        font-size: 20px;
+    }
+
+    .box-container p {
+        line-height: 200%;
+        font-size: 15px;
+    }
+
+    .btntoggle {
+        display: block;
+    }
+
+    #textwellcome {
+        font-size: 13px;
+    }
+
+    .textlinespacing {
+        line-height: normal !important;
+        color: #4f4f4f;
+    }
+
+    .navbar-nav li a {
+        font-size: 13px !important;
+    }
+
+    #textlinehight {
+        font-size: 13px;
+    }
+
+    .imgloganimation img {
+        height: 200px;
+        object-fit: cover;
+        width: 100%;
+    }
+}
